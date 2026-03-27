@@ -3,7 +3,13 @@ import GoalSelectionScreen from "./screens/GoalSelectionScreen";
 import PeriodScreen from "./screens/PeriodScreen";
 import PregnantModeScreen from "./screens/PregnantModeScreen";
 import PregnancyTrackerScreen from "./screens/PregnancyTrackerScreen";
-import MenopauseScreen from "./screens/MenopauseScreen";
+import NewbornScreen from "./screens/NewbornScreen";
+import VaccinationsScreen from "./screens/VaccinationsScreen";
+import FoodChartScreen from "./screens/FoodChartScreen";
+import BabyTipsScreen from "./screens/BabyTipsScreen";
+import NearbyHealthScreen from "./screens/NearbyHealthScreen";
+import BreastfeedingScreen from "./screens/BreastfeedingScreen";
+import GrowthTrackerScreen from "./screens/GrowthTrackerScreen";
 
 export default function App() {
   return (
@@ -13,7 +19,13 @@ export default function App() {
         <Route path="/period" element={<PeriodScreen />} />
         <Route path="/pregnant" element={<PregnantModeScreen />} />
         <Route path="/pregnancy-tracker" element={<PregnancyTrackerScreen />} />
-        <Route path="/menopause" element={<MenopauseScreen />} />
+        <Route path="/newborn" element={<NewbornScreen />} />
+        <Route path="/vaccinations" element={<VaccinationsScreen />} />
+        <Route path="/food-chart" element={<FoodChartScreen />} />
+        <Route path="/baby-tips" element={<BabyTipsScreen />} />
+        <Route path="/nearby-health" element={<NearbyHealthScreen />} />
+        <Route path="/breastfeeding" element={<BreastfeedingScreen />} />
+        <Route path="/growth-tracker" element={<GrowthTrackerScreen />} />
       </Routes>
     </BrowserRouter>
   );

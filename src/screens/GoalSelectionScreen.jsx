@@ -32,11 +32,11 @@ const goals = [
   },
   {
     emoji: "🌼",
-    title: "Perimenopause",
-    subtitle: "Navigate your transition",
+    title: "New Born Baby",
+    subtitle: "Track your newborn's growth",
     accent: "#3CC98A",
     glow: "rgba(60,201,138,0.35)",
-    path: "/menopause",
+    path: "/newborn",
     delay: "fade-up-5",
   },
 ];
