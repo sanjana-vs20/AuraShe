@@ -22,6 +22,12 @@ body {
   flex-direction: column;
 }
 
+/* Fertility / Get Pregnant responsive */
+@media (max-width: 640px) {
+  .fertility-dashboard { grid-template-columns: 1fr !important; }
+  .fertility-info-row  { grid-template-columns: 1fr !important; }
+}
+
 /* Scrollbar */
 ::-webkit-scrollbar { width: 6px; }
 ::-webkit-scrollbar-track { background: transparent; }
