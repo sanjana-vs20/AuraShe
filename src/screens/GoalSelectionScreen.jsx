@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { COLORS, GRADIENTS } from "../theme";
+import Navbar from "../components/Navbar";
 
 const goals = [
   {
@@ -136,6 +137,7 @@ export default function GoalSelectionScreen() {
       <div style={styles.blob3} />
       {/* Rotating ring accent */}
       <div style={styles.ring} />
+      <Navbar />
 
       <div style={styles.container}>
         {/* Brand pill */}
@@ -235,7 +237,7 @@ const styles = {
     zIndex: 1,
     maxWidth: "560px",
     margin: "0 auto",
-    padding: "56px 24px 64px",
+    padding: "80px 24px 64px",
   },
   brandPill: {
     display: "inline-flex",

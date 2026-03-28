@@ -128,7 +128,7 @@ export default function FertilityTrackerScreen() {
 
         {/* top bar */}
         <div style={s.topBar}>
-          <button onClick={() => navigate("/")} style={s.backBtn}>← Back</button>
+          <button onClick={() => navigate("/goal")} style={s.backBtn}>← Back</button>
           <span style={s.topTitle}>Fertility Tracker</span>
           <div style={{width:64}}/>
         </div>

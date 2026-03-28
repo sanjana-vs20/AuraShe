@@ -3,12 +3,14 @@ import { useNavigate } from "react-router-dom";
 import { GRADIENTS } from "../theme";
 
 const tiles = [
-  { emoji: "📍", label: "Nearby Health",          accent: "#3B82F6", path: "/nearby-health" },
-  { emoji: "💉", label: "Vaccinations",            accent: "#3CC98A", path: "/vaccinations" },
-  { emoji: "📊", label: "Growth Tracker",          accent: "#10B981", path: "/growth-tracker" },
-  { emoji: "🤱", label: "Breastfeeding",           accent: "#EC4899", path: "/breastfeeding" },
-  { emoji: "🍽️", label: "Food Chart",             accent: "#FF9A5C", path: "/food-chart" },
-  { emoji: "💡", label: "Tips",                    accent: "#6C63FF", path: "/baby-tips" },
+  { emoji: "📍", label: "Nearby Health",   accent: "#3B82F6", path: "/nearby-health" },
+  { emoji: "💉", label: "Vaccinations",     accent: "#3CC98A", path: "/vaccinations" },
+  { emoji: "📊", label: "Growth Tracker",   accent: "#10B981", path: "/growth-tracker" },
+  { emoji: "🤱", label: "Breastfeeding",    accent: "#EC4899", path: "/breastfeeding" },
+  { emoji: "🍽️", label: "Food Chart",      accent: "#FF9A5C", path: "/food-chart" },
+  { emoji: "💡", label: "Tips",             accent: "#6C63FF", path: "/baby-tips" },
+  { emoji: "🚨", label: "Emergency Signs",  accent: "#FF3B3B", path: "/emergency-signs" },
+  { emoji: "🩺", label: "Symptom Checker",  accent: "#FF5C8A", path: "/symptom-checker" },
 ];
 
 function Tile({ tile }) {
@@ -63,7 +65,7 @@ export default function NewbornScreen() {
       <div style={styles.blob2} />
 
       <div style={{ ...styles.header, background: GRADIENTS.greenHeader }}>
-        <button onClick={() => navigate("/")} style={styles.back}>← Back</button>
+        <button onClick={() => navigate("/goal")} style={styles.back}>← Back</button>
         <div style={styles.headerEmoji}>🌼</div>
         <h1 style={styles.headerTitle}>New Born Baby</h1>
         <p style={styles.headerSub}>Track your newborn's growth</p>

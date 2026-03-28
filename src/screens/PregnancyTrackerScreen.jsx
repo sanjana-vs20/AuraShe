@@ -39,7 +39,7 @@ export default function PregnancyTrackerScreen() {
           style={{ background: "rgba(255,255,255,0.08)" }} />
 
         <motion.button whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}
-          onClick={() => navigate("/")}
+          onClick={() => navigate("/goal")}
           className="mb-7 text-white text-sm font-semibold inline-flex items-center gap-2"
           style={{ background: "rgba(255,255,255,0.18)", border: "1px solid rgba(255,255,255,0.25)", padding: "8px 18px", borderRadius: "100px", backdropFilter: "blur(10px)", cursor: "pointer" }}>
           ← Back

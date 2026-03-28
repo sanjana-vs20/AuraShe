@@ -167,7 +167,7 @@ export default function PeriodScreen() {
 
         {/* ── Top bar ── */}
         <div className="fade-up" style={s.topBar}>
-          <button onClick={() => navigate("/")} style={s.backBtn}>← Back</button>
+          <button onClick={() => navigate("/goal")} style={s.backBtn}>← Back</button>
           <span style={s.topTitle}>Period Tracker</span>
           <div style={{ width: 64 }} />
         </div>

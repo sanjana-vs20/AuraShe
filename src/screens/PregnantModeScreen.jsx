@@ -239,7 +239,7 @@ export default function PregnantModeScreen() {
 
         {/* top bar */}
         <div style={s.topBar}>
-          <button onClick={() => navigate("/")} style={s.backBtn}>← Back</button>
+          <button onClick={() => navigate("/goal")} style={s.backBtn}>← Back</button>
           <span style={s.topTitle}>Get Pregnant</span>
           <div style={{width:64}}/>
         </div>
