@@ -1,5 +1,6 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import GoalSelectionScreen from "./screens/GoalSelectionScreen";
+import FertilityTrackerScreen from "./screens/FertilityTrackerScreen";
 import PeriodScreen from "./screens/PeriodScreen";
 import PregnantModeScreen from "./screens/PregnantModeScreen";
 import PregnancyTrackerScreen from "./screens/PregnancyTrackerScreen";
@@ -26,6 +27,7 @@ export default function App() {
         <Route path="/nearby-health" element={<NearbyHealthScreen />} />
         <Route path="/breastfeeding" element={<BreastfeedingScreen />} />
         <Route path="/growth-tracker" element={<GrowthTrackerScreen />} />
+        <Route path="/fertility" element={<FertilityTrackerScreen />} />
       </Routes>
     </BrowserRouter>
   );
