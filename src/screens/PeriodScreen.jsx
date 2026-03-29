@@ -170,7 +170,20 @@ export default function PeriodScreen() {
           <button onClick={() => navigate("/goal")} style={s.backBtn}>← Back</button>
           <span style={s.topTitle}>Period Tracker</span>
           <div style={{ width: 64 }} />
+      {/* ── Full-width Gradient Header ── */}
+      <div className="header-fade" style={s.pageHeader}>
+        <div style={s.pageHeaderGlow} />
+        <div style={s.pageHeaderGlow2} />
+        <div style={s.pageHeaderInner} className="period-header-inner">
+          <button onClick={() => navigate("/")} style={s.pageBackBtn}>← Back</button>
+          <div style={s.pageHeaderEmoji}>🌸</div>
+          <h1 style={s.pageHeaderTitle}>Period Tracker</h1>
+          <p style={s.pageHeaderSub}>Stay in sync with your cycle</p>
         </div>
+      </div>
+
+      {/* ── Centered content shell ── */}
+      <div style={s.shell}>
 
         {/* ── HERO ── */}
         <div className="fade-up-1" style={{
@@ -604,6 +617,12 @@ export default function PeriodScreen() {
 
         </div>
       </div>
+
+      {/* Floating chat button */}
+      <button onClick={() => navigate("/chat")} style={s.chatFab}>
+        💬
+      </button>
+
     </div>
   );
 }
@@ -618,18 +637,23 @@ const glass = {
 
 const s = {
   /* ── Page ── */
-  page: { minHeight: "100vh", background: "linear-gradient(145deg,#0f0c29 0%,#302b63 50%,#24243e 100%)", position: "relative", overflowX: "hidden", display: "flex", justifyContent: "center" },
+  page: { minHeight: "100vh", background: "linear-gradient(145deg,#0f0c29 0%,#302b63 50%,#24243e 100%)", position: "relative", overflowX: "hidden", display: "flex", flexDirection: "column", alignItems: "center" },
   blob1: { position: "fixed", top: "-120px", right: "-100px", width: "400px", height: "400px", borderRadius: "50%", background: "radial-gradient(circle,rgba(255,92,138,0.28) 0%,transparent 70%)", animation: "blobPulse 9s ease-in-out infinite", pointerEvents: "none", zIndex: 0 },
   blob2: { position: "fixed", bottom: "-100px", left: "-80px", width: "320px", height: "320px", borderRadius: "50%", background: "radial-gradient(circle,rgba(108,99,255,0.22) 0%,transparent 70%)", animation: "blobPulse 12s 2s ease-in-out infinite", pointerEvents: "none", zIndex: 0 },
   blob3: { position: "fixed", top: "40%", left: "50%", transform: "translateX(-50%)", width: "500px", height: "500px", borderRadius: "50%", background: "radial-gradient(circle,rgba(200,80,192,0.1) 0%,transparent 65%)", pointerEvents: "none", zIndex: 0 },
 
   /* ── Shell ── */
-  shell: { position: "relative", zIndex: 1, width: "100%", maxWidth: "480px", padding: "0 16px 40px", display: "flex", flexDirection: "column", gap: "16px" },
+  shell: { position: "relative", zIndex: 1, width: "100%", maxWidth: "480px", padding: "24px 16px 40px", display: "flex", flexDirection: "column", gap: "16px" },
 
-  /* ── Top bar ── */
-  topBar: { display: "flex", alignItems: "center", justifyContent: "space-between", paddingTop: "52px", paddingBottom: "4px" },
-  backBtn: { background: "rgba(255,255,255,0.1)", border: "1px solid rgba(255,255,255,0.18)", color: "#fff", fontSize: "13px", fontWeight: "600", cursor: "pointer", padding: "8px 16px", borderRadius: "100px", backdropFilter: "blur(10px)", letterSpacing: "0.3px", transition: "all 0.2s ease" },
-  topTitle: { fontSize: "17px", fontWeight: "700", color: "#fff", letterSpacing: "-0.3px" },
+  /* ── Page Header ── */
+  pageHeader:      { position: "relative", zIndex: 1, overflow: "hidden", width: "100%", background: "linear-gradient(135deg,#FF5C8A 0%,#C850C0 100%)", borderRadius: "0 0 40px 40px", boxShadow: "0 16px 48px rgba(255,92,138,0.45), 0 4px 16px rgba(0,0,0,0.3)", color: "#fff" },
+  pageHeaderInner: { maxWidth: "480px", margin: "0 auto", display: "flex", flexDirection: "column", alignItems: "flex-start", textAlign: "left" },
+  pageHeaderGlow:  { position: "absolute", top: "-60px", right: "-60px", width: "220px", height: "220px", borderRadius: "50%", background: "rgba(255,255,255,0.08)", pointerEvents: "none" },
+  pageHeaderGlow2: { position: "absolute", bottom: "-40px", left: "-40px", width: "160px", height: "160px", borderRadius: "50%", background: "rgba(108,99,255,0.2)", filter: "blur(30px)", pointerEvents: "none" },
+  pageBackBtn:     { background: "rgba(255,255,255,0.18)", border: "1px solid rgba(255,255,255,0.25)", color: "#fff", fontSize: "13px", fontWeight: "600", cursor: "pointer", padding: "8px 18px", borderRadius: "100px", marginBottom: "28px", display: "inline-block", backdropFilter: "blur(10px)", letterSpacing: "0.3px", alignSelf: "flex-start" },
+  pageHeaderEmoji: { fontSize: "56px", marginBottom: "16px", filter: "drop-shadow(0 4px 12px rgba(255,255,255,0.3))", display: "block", textAlign: "left" },
+  pageHeaderTitle: { fontSize: "34px", fontWeight: "900", marginBottom: "8px", letterSpacing: "-0.5px", lineHeight: "1.2", textAlign: "left", width: "100%" },
+  pageHeaderSub:   { fontSize: "16px", opacity: 0.78, lineHeight: "1.5", textAlign: "left", width: "100%" },
 
   /* ── Hero ── */
   hero: { ...glass, background: "linear-gradient(135deg,rgba(255,92,138,0.35) 0%,rgba(200,80,192,0.3) 50%,rgba(108,99,255,0.3) 100%)", border: "1px solid rgba(255,255,255,0.18)", padding: "28px 24px 22px", position: "relative", overflow: "hidden", boxShadow: "0 20px 60px rgba(255,92,138,0.25), 0 8px 24px rgba(0,0,0,0.3), inset 0 1px 0 rgba(255,255,255,0.15)" },
@@ -727,4 +751,5 @@ const s = {
   pmResultTitle:  { fontSize: "15px", fontWeight: "800", lineHeight: 1.3 },
   pmResultSub:    { fontSize: "13px", color: "rgba(255,255,255,0.55)", lineHeight: 1.55 },
   pmTipsWrap:     { display: "flex", flexDirection: "column", gap: "8px" },
+  chatFab:        { position: "fixed", bottom: "28px", right: "24px", width: "56px", height: "56px", borderRadius: "50%", border: "none", background: "linear-gradient(135deg,#FF5C8A,#C850C0)", color: "#fff", fontSize: "24px", cursor: "pointer", boxShadow: "0 8px 28px rgba(255,92,138,0.5)", zIndex: 100, display: "flex", alignItems: "center", justifyContent: "center", transition: "transform 0.2s ease" },
 };
